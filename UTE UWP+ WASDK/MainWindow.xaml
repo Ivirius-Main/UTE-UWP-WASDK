@@ -8,7 +8,6 @@
     mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="48"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid x:Name="AppTitleBar" Height="40" Grid.Row="0">
@@ -28,15 +27,9 @@
                Padding="10,0,10,0">
                 <SymbolIcon Symbol="Back" />
             </AppBarButton>
-            <TextBlock x:Name="TitleTextBlock" 
-               Text="Photo Lab" 
-               Style="{StaticResource CaptionTextBlockStyle}"
-               Grid.Column="2"
-               VerticalAlignment="Center"
-               Margin="4,0,0,0"/>
         </Grid>
         <!-- Your pages will be loaded in this Frame -->
-        <Frame Grid.Row="1" Height="Auto" x:Name="PageFrame" />
+        <Frame Grid.Row="0" Height="Auto" x:Name="PageFrame" />
 
     </Grid>
 
