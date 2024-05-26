@@ -266,10 +266,8 @@ namespace UTE_UWP_.Views
 
         private void VIDsButton_Click(object sender, RoutedEventArgs e)
         {
-            if (App.Window.Content is Frame rootFrame)
-            {
-                rootFrame.Navigate(typeof(VelocityIDsPage));
-            }
+            var mainframe = this.Parent as Frame;
+            mainframe.Navigate(typeof(VelocityIDsPage));
         }
 
         private void AccentBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

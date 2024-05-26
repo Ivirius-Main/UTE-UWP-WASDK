@@ -29,7 +29,7 @@
             </AppBarButton>
         </Grid>
         <!-- Your pages will be loaded in this Frame -->
-        <Frame Grid.Row="0" Height="Auto" x:Name="PageFrame" />
+        <Frame Grid.Row="0" Height="Auto" x:Name="PageFrame" x:FieldModifier="public"/>
 
     </Grid>
 

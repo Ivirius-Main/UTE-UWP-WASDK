@@ -34,6 +34,7 @@ using Microsoft.UI.Xaml.Markup;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using SplitButton = Microsoft.UI.Xaml.Controls.SplitButton;
+using UTE_UWP_.Services;
 namespace UTE_UWP_.Views
 {
     public sealed partial class MainPage : Page, INotifyPropertyChanged
@@ -880,11 +881,9 @@ namespace UTE_UWP_.Views
         {
             /*SettingsDialog dlg = new(editor, FontsCombo, this);
             await dlg.ShowAsync();*/
-
-            if (App.Window.Content is Frame rootFrame)
-            {
-                rootFrame.Navigate(typeof(SettingsPage));
-            }
+            MainWindow mainwindow = new MainWindow();
+            var mainframe = this.Parent as Frame;
+            mainframe.Navigate(typeof(SettingsPage));
         }
 
         private void RemoveHighlightButton_Click(object sender, RoutedEventArgs e)
