@@ -647,7 +647,8 @@ namespace UTE_UWP_.Views
                 ImageOptionsDialog dialog = new ImageOptionsDialog()
                 {
                     DefaultWidth = width,
-                    DefaultHeight = height
+                    DefaultHeight = height,
+                    XamlRoot = this.XamlRoot
                 };
 
                 ContentDialogResult result = await dialog.ShowAsync();
@@ -747,7 +748,8 @@ namespace UTE_UWP_.Views
                 CloseButtonText = "Cancel",
                 PrimaryButtonText = "Save changes",
                 SecondaryButtonText = "No",
-                DefaultButton = ContentDialogButton.Primary
+                DefaultButton = ContentDialogButton.Primary,
+                XamlRoot = this.XamlRoot
             };
 
             aboutDialog.CloseButtonClick += (s, e) => this._openDialog = false;
@@ -922,6 +924,7 @@ namespace UTE_UWP_.Views
             utever dialog = new utever();
 
             dialog.DefaultButton = ContentDialogButton.Primary;
+            dialog.XamlRoot = this.XamlRoot;
 
 
             var result = await dialog.ShowAsync();
@@ -1096,6 +1099,7 @@ namespace UTE_UWP_.Views
         private async void AddTableButton_Click(object sender, RoutedEventArgs e)
         {
             var dialogtable = new TableDialog();
+            dialogtable.XamlRoot = this.XamlRoot;
             await dialogtable.ShowAsync();
             InsertTableInRichTextBox(dialogtable.rows, dialogtable.columns, 1000);
         }
@@ -1172,6 +1176,8 @@ namespace UTE_UWP_.Views
 
             // Set the content of the ContentDialog to the ListView
             dialog.Content = listView;
+            dialog.XamlRoot = this.XamlRoot;
+
 
             // Make the insert button colored
             dialog.DefaultButton = ContentDialogButton.Primary;
@@ -1198,12 +1204,14 @@ namespace UTE_UWP_.Views
         private async void fr_invoke(object sender, RoutedEventArgs e)
         {
             var dialog = new FirstRunDialog();
+            dialog.XamlRoot = this.XamlRoot;
             dialog.ShowAsync();
         }
 
         private async void WN_invoke(object sender, RoutedEventArgs e)
         {
             var dialog = new WhatsNewDialog();
+            dialog.XamlRoot = this.XamlRoot;
             dialog.ShowAsync();
         }
 
@@ -1736,7 +1744,8 @@ namespace UTE_UWP_.Views
                 CloseButtonText = "Cancel",
                 PrimaryButtonText = "Save changes",
                 SecondaryButtonText = "No",
-                DefaultButton = ContentDialogButton.Primary
+                DefaultButton = ContentDialogButton.Primary,
+                XamlRoot = this.XamlRoot
             };
 
             aboutDialog.CloseButtonClick += (s, e) => this._openDialog = false;
