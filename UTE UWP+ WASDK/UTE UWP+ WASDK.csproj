@@ -104,6 +104,7 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240428000" />
     <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.2.0" />
     <PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.5" />
+    <PackageReference Include="WinUI3Localizer" Version="2.2.0" />
   </ItemGroup>
   <ItemGroup>
     <PRIResource Include="Strings\en-us\Resources.resw" />
