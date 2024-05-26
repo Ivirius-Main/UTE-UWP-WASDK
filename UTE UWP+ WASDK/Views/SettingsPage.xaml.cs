@@ -162,13 +162,14 @@ namespace UTE_UWP_.Views
         //    AppTitleBar.Margin = new Thickness(currMargin.Left, currMargin.Top, coreTitleBar.SystemOverlayRightInset, currMargin.Bottom);
         //}
 
-        //private void BackButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (App.Window.Content is Frame rootFrame && rootFrame.CanGoBack)
-        //    {
-        //        rootFrame.GoBack();
-        //    }
-        //}
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            var mainframe = this.Parent as Frame;
+            if (mainframe.CanGoBack)
+            {
+                mainframe.GoBack();
+            }
+        }
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {

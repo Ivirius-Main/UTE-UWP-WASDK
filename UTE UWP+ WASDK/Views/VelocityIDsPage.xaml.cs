@@ -86,9 +86,10 @@ namespace UTE_UWP_.Views
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (App.Window.Content is Frame rootFrame && rootFrame.CanGoBack)
+            var mainframe = this.Parent as Frame;
+            if (mainframe.CanGoBack)
             {
-                rootFrame.GoBack();
+                mainframe.GoBack();
             }
         }
 
